@@ -16,8 +16,17 @@ public class ServerMain extends Application {
         primaryStage.getIcons().add(new Image("server/Wanna_Chat_logo_Server-01.png"));
         primaryStage.setScene(new Scene(root));
         primaryStage.sizeToScene();
+        primaryStage.setOnCloseRequest(event -> {
+            try {
+                stop();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
         primaryStage.show();
     }
+
+
 
 
     public static void main(String[] args) {
