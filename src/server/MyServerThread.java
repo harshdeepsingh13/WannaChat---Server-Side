@@ -57,8 +57,8 @@ public class MyServerThread extends Thread{
         try {
 //            InetAddress inetAddress = InetAddress.getByName("46.155.17.100");
 //            serverSocket = new ServerSocket(2000,20,inetAddress);
-            serverSocket = new ServerSocket();
-            serverSocket.bind(new InetSocketAddress("192.168.1.20",3333));
+            serverSocket = new ServerSocket(9999);
+//            serverSocket.bind(new InetSocketAddress("200.200.00.01",9999));
             boolean flag = true;
             while(true)
             {
