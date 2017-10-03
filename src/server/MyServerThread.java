@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -56,9 +57,10 @@ public class MyServerThread extends Thread{
     public void run() {
         try {
 //            InetAddress inetAddress = InetAddress.getByName("46.155.17.100");
+
 //            serverSocket = new ServerSocket(2000,20,inetAddress);
-            serverSocket = new ServerSocket(9999);
-//            serverSocket.bind(new InetSocketAddress("200.200.00.01",9999));
+
+            serverSocket = new ServerSocket(2000);
             boolean flag = true;
             while(true)
             {
