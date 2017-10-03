@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="WannaChatServer">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/out/artifacts/WannaChatServer_jar/WannaChatServer.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
