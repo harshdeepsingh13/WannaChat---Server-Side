@@ -1,4 +1,4 @@
-package server;
+package server.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,9 +11,9 @@ public class ServerMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("servergui.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/server/fxml/servergui.fxml"));
         primaryStage.setTitle("Wanna Chat Server");
-        primaryStage.getIcons().add(new Image("server/Wanna_Chat_logo_Server-01.png"));
+        primaryStage.getIcons().add(new Image("server/resources/images/Wanna_Chat_logo_Server-01.png"));
         primaryStage.setScene(new Scene(root));
         primaryStage.sizeToScene();
         primaryStage.setOnCloseRequest(event -> {

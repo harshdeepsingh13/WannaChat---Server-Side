@@ -1,4 +1,4 @@
-package server;
+package server.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,6 +11,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import server.threads.MyServerThread;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class ServerController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        logoImageView.setImage(new Image("server/Wanna_Chat_logo_Server-01.png"));
+        logoImageView.setImage(new Image("server/resources/images/Wanna_Chat_logo_Server-01.png"));
         observableList = FXCollections.observableArrayList();
         listView.setItems(observableList);
 
@@ -40,12 +41,12 @@ public class ServerController implements Initializable{
         System.out.println("aboutMenuItem onAction");
         aboutMenuItem.setOnAction(event -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            ((Stage)alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/server/Wanna_Chat_logo_Server-01.png"));
-            alert.getDialogPane().getStylesheets().add(getClass().getResource("/server/dialogStyle.css").toExternalForm());
+            ((Stage)alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image("/server/resources/images/Wanna_Chat_logo_Server-01.png"));
+            alert.getDialogPane().getStylesheets().add(getClass().getResource("/server/resources/styles/dialogStyle.css").toExternalForm());
             alert.getDialogPane().getStyleClass().add("dialogStyle");
             alert.setTitle("About");
             alert.setHeaderText("About WannaChat Server");
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/server/About.txt")));
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/server/resources/others/About.txt")));
 
             StringBuffer stringBuffer = new StringBuffer();
             String s;

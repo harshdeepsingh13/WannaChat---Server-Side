@@ -1,12 +1,11 @@
-package server;
+package server.threads;
 
 import javafx.application.Platform;
+import server.controller.ServerController;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;

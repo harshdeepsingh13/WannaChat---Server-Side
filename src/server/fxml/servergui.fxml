@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<VBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.ServerController">
+<VBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.controller.ServerController">
    <children>
       <MenuBar>
          <menus>
@@ -24,7 +24,7 @@
                      <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@about.png" />
+                              <Image url="@../resources/images/about.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -46,7 +46,7 @@
                <children>
                   <ImageView fx:id="logoImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Wanna_Chat_logo_Server-01.png" />
+                        <Image url="@../resources/images/Wanna_Chat_logo_Server-01.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="10.0" />
