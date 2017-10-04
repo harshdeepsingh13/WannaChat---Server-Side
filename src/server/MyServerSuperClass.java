@@ -40,7 +40,8 @@ public class MyServerSuperClass extends Thread{
                     Socket socket = myServerThread.getSocketsMap().get(index);
                     if(sendAdditionalInfo)
                     {
-                        if(recipientsArrayList.contains(socket))
+                        System.out.println("recipientsArrayList: " + recipientsArrayList);
+                        if(recipientsArrayList.contains(socket) )
                         try {
                             ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
                             objectOutputStream.writeObject(myArrayList);
@@ -76,6 +77,12 @@ public class MyServerSuperClass extends Thread{
             sendersIndex = null;
 
             sendAdditionalInfo=false;
+
+            try {
+                Thread.currentThread().sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
         }
     }
