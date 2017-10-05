@@ -33,7 +33,6 @@ public class MyClientServerHandlingThread extends Thread{
 
     @Override
     public void run() {
-//        super.run();
         boolean isExit = false;
         while(!isExit)
         {
@@ -75,13 +74,6 @@ public class MyClientServerHandlingThread extends Thread{
                                     Socket s = myServerThread.getSocketsMap().get(index);
                                     recipientsList.add(s);
                                 }
-//                                DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
-//                                String in = String.valueOf(mySocketIndex);
-//                                System.out.println("in: " + in);
-//                                String m = in + "\n" + message;
-//                                outputStream.writeBoolean(true);
-//                                outputStream.writeUTF(m); outputStream.flush();
-//                                outputStream.writeBytes(m);outputStream.flush();
                             }
                         }
                         System.out.println("recipientsList: " + recipientsList);

@@ -39,7 +39,6 @@ public class MyServerThread extends Thread{
     }
 
     public Map<Integer, Socket> getSocketsMap() {
-//        return socketsMap;
         return new ConcurrentHashMap<>(socketsMap);
     }
 
@@ -48,17 +47,12 @@ public class MyServerThread extends Thread{
     }
 
     public Map<Integer, String> getNameMap() {
-//        return nameMap;
         return new ConcurrentHashMap<>(nameMap);
     }
 
     @Override
     public void run() {
         try {
-//            InetAddress inetAddress = InetAddress.getByName("46.155.17.100");
-
-//            serverSocket = new ServerSocket(2000,20,inetAddress);
-
             serverSocket = new ServerSocket(2000);
             boolean flag = true;
             while(true)

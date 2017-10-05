@@ -23,10 +23,8 @@ public class MyServerSuperClass extends Thread{
 
     @Override
     public void run() {
-//        super.run();
         int previous = myServerThread.getSocketsMap().size()-1;
         while(true) {
-//            System.out.println(myServerThread.getSocketsMap().size());
             if (myServerThread.getSocketsMap().size() != previous || sendAdditionalInfo) {
                 myArrayList.clear(); myArrayList.add(myServerThread.getNameMap());
                 myArrayList.add(myServerThread.getLastClosedIndex());
@@ -86,7 +84,6 @@ public class MyServerSuperClass extends Thread{
 
         }
     }
-
     public void sendingAdditionalData(ArrayList<Socket> recipientsArray, String message, Integer integer)
     {
         recipientsArrayList = recipientsArray;
@@ -95,13 +92,4 @@ public class MyServerSuperClass extends Thread{
         System.out.println("sendersIndex: " + sendersIndex);
         sendAdditionalInfo=true;
     }
-
-//    public ArrayList<Object> getAdditionalDataMetaData()
-//    {
-//        ArrayList<Object> myList = new ArrayList<>();
-//        myList.add(recipientsArrayList);
-//        myList.add(messageToClient);
-//        return myList;
-//    }
-
 }

@@ -27,8 +27,6 @@ public class ServerController implements Initializable{
 
     private ObservableList<Socket> observableList;
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         logoImageView.setImage(new Image("server/resources/images/Wanna_Chat_logo_Server-01.png"));
